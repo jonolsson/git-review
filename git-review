@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git log --oneline --grep="$1" | cut -d ' ' -f 1 | while read l; do git show $l; done
+
+# git log --oneline --grep="NOVA-110" | cut -d ' ' -f 1 | while read l; do git show $l; done
